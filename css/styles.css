@@ -36,3 +36,22 @@
 .nav-drop-link.w--current {
   color: var(--silver);
 }
+
+/*--------------------------------------------------
+  Animations
+--------------------------------------------------*/
+
+.modal-1.active,
+.modal-2.active,
+.modal-3.active {
+  animation: modal 400ms ease;
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}

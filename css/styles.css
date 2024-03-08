@@ -55,3 +55,12 @@
     opacity: 100%;
   }
 }
+
+/*--------------------------------------------------
+  Gradient Text
+--------------------------------------------------*/
+
+.main-headin,
+.text-gradient {
+  -webkit-background-clip: text;
+}

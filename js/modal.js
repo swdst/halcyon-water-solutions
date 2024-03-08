@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     Modal 3
   --------------------------------------------------*/
   // Open Modal 3
-  document.querySelectorAll(".open-modal-1").forEach((trigger) => {
+  document.querySelectorAll(".open-modal-3").forEach((trigger) => {
     trigger.addEventListener("click", function () {
       document.querySelectorAll(".modal-3").forEach((target) => target.classList.add("active"));
     });

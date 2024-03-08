@@ -1,23 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
+  function toggleModal(modalClass) {
+    document.querySelectorAll(modalClass).forEach((target) => {
+      target.classList.toggle("active");
+    });
+  }
+
   /*--------------------------------------------------
     Modal 1
   --------------------------------------------------*/
   // Open Modal 1
   document.querySelectorAll(".open-modal-1").forEach((trigger) => {
-    trigger.addEventListener("click", function () {
-      document.querySelectorAll(".modal-1").forEach((target) => target.classList.add("active"));
-    });
-  });
-  // Close Modal 1
-  document.querySelectorAll(".modal-1").forEach((trigger) => {
-    trigger.addEventListener("click", function () {
-      document.querySelectorAll(".modal-1").forEach((target) => target.classList.remove("active"));
-    });
-  });
-  document.querySelectorAll(".close-icon").forEach((trigger) => {
-    trigger.addEventListener("click", function () {
-      document.querySelectorAll(".modal-1").forEach((target) => target.classList.remove("active"));
-    });
+    trigger.addEventListener("click", () => toggleModal(".modal-1"));
   });
 
   /*--------------------------------------------------
@@ -25,20 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   --------------------------------------------------*/
   // Open Modal 2
   document.querySelectorAll(".open-modal-2").forEach((trigger) => {
-    trigger.addEventListener("click", function () {
-      document.querySelectorAll(".modal-2").forEach((target) => target.classList.add("active"));
-    });
-  });
-  // Close Modal 2
-  document.querySelectorAll(".modal-2").forEach((trigger) => {
-    trigger.addEventListener("click", function () {
-      document.querySelectorAll(".modal-2").forEach((target) => target.classList.remove("active"));
-    });
-  });
-  document.querySelectorAll(".close-icon").forEach((trigger) => {
-    trigger.addEventListener("click", function () {
-      document.querySelectorAll(".modal-2").forEach((target) => target.classList.remove("active"));
-    });
+    trigger.addEventListener("click", () => toggleModal(".modal-2"));
   });
 
   /*--------------------------------------------------
@@ -46,19 +26,15 @@ document.addEventListener("DOMContentLoaded", () => {
   --------------------------------------------------*/
   // Open Modal 3
   document.querySelectorAll(".open-modal-3").forEach((trigger) => {
-    trigger.addEventListener("click", function () {
-      document.querySelectorAll(".modal-3").forEach((target) => target.classList.add("active"));
-    });
+    trigger.addEventListener("click", () => toggleModal(".modal-3"));
   });
-  // Close Modal 3
-  document.querySelectorAll(".modal-3").forEach((trigger) => {
-    trigger.addEventListener("click", function () {
-      document.querySelectorAll(".modal-3").forEach((target) => target.classList.remove("active"));
-    });
-  });
+
+  // Close any modal when close-icon is clicked
   document.querySelectorAll(".close-icon").forEach((trigger) => {
-    trigger.addEventListener("click", function () {
-      document.querySelectorAll(".modal-3").forEach((target) => target.classList.remove("active"));
+    trigger.addEventListener("click", () => {
+      document.querySelectorAll(".modal").forEach((target) => {
+        target.classList.remove("active");
+      });
     });
   });
 });

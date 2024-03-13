@@ -64,3 +64,11 @@
 .text-gradient {
   -webkit-background-clip: text;
 }
+
+/*--------------------------------------------------
+  Video Lightbox
+--------------------------------------------------*/
+
+.w-lightbox-frame iframe {
+  border-radius: 15px;
+}
